@@ -1,8 +1,7 @@
 let difficoltà = document.getElementById('difficult').value;
 let box = document.createElement('div');
-const easy_game= easy();
-const medium_game= medium();
-const hard_game= hard();
+let clear = document.querySelector('.grid').innerHTML = '';
+
 
 
 function play(){
@@ -10,7 +9,7 @@ function play(){
 
     switch(difficoltà) {
         case 'easy':
-            
+            easy();
             break;
         case 'medium':
             medium();
@@ -34,6 +33,7 @@ function play(){
 
 /*--------------------------------------------Funzioni------------------------------------------------------*/
 function easy(){
+    clear = document.querySelector('.grid').innerHTML = '';
 
     for( let i=1; i <= 100; i++){
         box = document.createElement('div');
@@ -45,6 +45,7 @@ function easy(){
     return box
 }
 function medium(){
+    clear = document.querySelector('.grid').innerHTML = '';
 
     for( let i=1; i <= 81; i++){
         box = document.createElement('div');
@@ -56,6 +57,7 @@ function medium(){
     return box
 }
 function hard(){
+    clear = document.querySelector('.grid').innerHTML = '';
 
     for( let i=1; i <= 49; i++){
         box = document.createElement('div');
@@ -65,8 +67,4 @@ function hard(){
         box.innerHTML= i
     }
     return box
-}
-
-function cancella(){
-    
 }
