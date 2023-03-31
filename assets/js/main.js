@@ -1,6 +1,6 @@
 let difficoltà = document.getElementById('difficult').value;
 let box = document.createElement('div');
-let clear = document.querySelector('.grid').innerHTML = '';
+let grid = document.querySelector('.grid');
 
 
 
@@ -22,48 +22,47 @@ function play(){
 
 
 
-
-
-
-
-
-
-
-
-
 /*--------------------------------------------Funzioni------------------------------------------------------*/
 function easy(){
-    clear = document.querySelector('.grid').innerHTML = '';
+    while(grid.firstChild){
+        grid.removeChild(grid.firstChild);
+    }
 
     for( let i=1; i <= 100; i++){
         box = document.createElement('div');
         box.classList.add('box');
         box.classList.add('box-easy');
-        document.querySelector('.grid').appendChild(box);
+        grid.appendChild(box);
         box.innerHTML= i;
     }
     return box
 }
+
 function medium(){
-    clear = document.querySelector('.grid').innerHTML = '';
+    while(grid.firstChild){
+        grid.removeChild(grid.firstChild);
+    }
 
     for( let i=1; i <= 81; i++){
         box = document.createElement('div');
         box.classList.add('box');
         box.classList.add('box-medium');
-        document.querySelector('.grid').appendChild(box);
+        grid.appendChild(box);
         box.innerHTML= i
     }
     return box
 }
+
 function hard(){
-    clear = document.querySelector('.grid').innerHTML = '';
+    while(grid.firstChild){
+        grid.removeChild(grid.firstChild);
+    }
 
     for( let i=1; i <= 49; i++){
         box = document.createElement('div');
         box.classList.add('box');
         box.classList.add('box-hard');
-        document.querySelector('.grid').appendChild(box);
+        grid.appendChild(box);
         box.innerHTML= i
     }
     return box
