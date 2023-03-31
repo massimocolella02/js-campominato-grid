@@ -20,11 +20,12 @@ footer{
 }
 .container-header,
 .container-footer{
+    height: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-left: 0.5em;
     padding-right: 0.5em;
-    line-height: 10vh;
 }
 .container{
     width: 80vh;
