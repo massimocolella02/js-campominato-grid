@@ -41,6 +41,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 .box-hard{
     width: calc(100% / 7);
@@ -53,4 +54,7 @@ footer{
 .box-easy{
     width: calc(100% / 10);
     height: calc(100% / 10);
+}
+.bg-azzurro{
+    background-color: aqua;
 }
